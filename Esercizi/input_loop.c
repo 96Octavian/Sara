@@ -1,28 +1,31 @@
 #pragma warning(disable: 4996)
 #include <stdio.h>
 
-int main(void)
+int _input_loop(void)
 {
 	int a, b;
-	char answer, input[50], * result;
+	char risposta, input[50], * risultato;
 	puts("Hello World!");
+
+	// TODO: Input di più di 50 caratteri
+	// TODO: Input di lunghezza variabile
+	// TODO: flush stdin
+
 
 	/*
 	 * Chiedi in input due numeri e fanne la somma.
 	 * Chiedi in loop se vuole farlo ancora.
 	 */
-	 // TODO: Input di più di 50 caratteri
-	 // TODO: Input di lunghezza variabile
 	printf("Vuoi sommare due numeri [S\\n]? ");
-	while ((result = fgets(input, sizeof(input), stdin)) && printf("La tua risposta è: %s", input)) {
-		if (1 != sscanf(input, "%c", &answer) || ('S' != answer && 'n' != answer)) {
+	while ((risultato = fgets(input, sizeof(input), stdin)) && printf("La tua risposta è: %s", input)) {
+		if (1 != sscanf(input, "%c", &risposta) || ('S' != risposta && 'n' != risposta)) {
 			printf("Per favore, rispondi solo S o n. Vuoi sommare due numeri? ");
 			continue;
 		}
-		if ('n' == answer)
+		if ('n' == risposta)
 			break;
 		puts("Inserisci due numeri da sommare:");
-		while ((result = fgets(input, sizeof(input), stdin)) && printf("Hai inserito: %s", input)) {
+		while ((risultato = fgets(input, sizeof(input), stdin)) && printf("Hai inserito: %s", input)) {
 			if (2 != sscanf(input, "%d %d", &a, &b)) {
 				printf("Per favore, inserisci solo i numeri da sommare separati da uno spazio: ");
 				continue;
@@ -30,17 +33,16 @@ int main(void)
 			printf("%d + %d = %d", a, b, a + b);
 			printf("Vuoi sommare altri due numeri [S\\n]? ");
 		}
-		if (!result)
+		if (!risultato)
 			break;
 	}
 
-	if (result)
+	if (risultato)
 		puts("Ciao!");
 	else {
 		puts("Errore nella lettura da stdin");
 		return 1;
 	}
-
 	return 0;
 }
 

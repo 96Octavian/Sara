@@ -15,14 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="input_loop.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="inserimento.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="media_e_cerca.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="useful.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
