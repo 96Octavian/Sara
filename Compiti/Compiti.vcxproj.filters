@@ -18,5 +18,8 @@
     <ClCompile Include="maggiore.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="persone.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

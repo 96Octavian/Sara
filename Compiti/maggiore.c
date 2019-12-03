@@ -16,9 +16,9 @@
 // Prototipi
 int max(int vettore[]);
 void stampa_pari(int tutti[]);
-void input_maggiore(int vettore[], int max);
+void maggiore(int vettore[], int max);
 
-int main(int argc, char *argv[]) {
+int _maggiore(int argc, char *argv[]) {
 	int numeri[LEN];		// Dichiariamo un array di interi
 	int i, massimo;
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 	massimo = max(numeri);		// Salviamo il risultato della funzione max()
 	printf("Il massimo è %d\n", massimo);
 	stampa_pari(numeri);
-	input_maggiore(numeri, massimo);
+	maggiore(numeri, massimo);
 
 	return 0;
 }
@@ -60,7 +60,7 @@ void stampa_pari(int tutti[]) {
 	}
 }
 
-void input_maggiore(int vettore[], int max) {
+void maggiore(int vettore[], int max) {
 	int input = -1;		// Usiamo questa come variabile di controllo, non importa quale valore le mettiamo adesso
 	int numero;
 
