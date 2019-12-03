@@ -8,7 +8,6 @@ struct prova {
 	char stringa[20];
 	int numero;
 };
-
 typedef struct prova container_t;
 
 void modifica_valore(container_t giorgio);
