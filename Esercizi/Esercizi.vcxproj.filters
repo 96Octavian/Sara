@@ -24,5 +24,8 @@
     <ClCompile Include="media_e_cerca.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="carica_media_switch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

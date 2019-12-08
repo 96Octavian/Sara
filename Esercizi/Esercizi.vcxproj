@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="carica_media_switch.c" />
     <ClCompile Include="input_loop.c" />
     <ClCompile Include="inserimento.c" />
     <ClCompile Include="media_e_cerca.c" />
